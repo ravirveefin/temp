@@ -488,3 +488,12 @@ various.php
     }
 
 
+public/uploads/df_migration.csv
+=======
+Sr No,Date (dd-mm-yyyy),OD Account No,Invoice Reference,Type,Due Date (dd-mm-yyyy),Debit,Credit,Balance,Accrued Interest Balance,Penal Interest Balance,As of (dd-mm-yyyy),Discounting Status,Transaction Reference,Drawdown Fees,Result
+1,13-06-2023,ODACC1,FIAT PUNTO+KA51ME4690,Drawdown,14-06-2023,"1,59,750",,"1,60,877",100,50,13-06-2023,Disbursed,43234,250,
+2,13-06-2023,ODACC1,FIAT PUNTO+KA51ME4690,Fees,14-06-2023,300,,,85,34,13-06-2023,,4546567,,
+3,13-06-2023,ODACC1,FIAT PUNTO+KA51ME4690,Interest Posting,14-06-2023,827,,,87,48,13-06-2023,,,,
+4,13-06-2023,ODACC2,FIAT PUNTO+KA51ME4691,Repayment,14-06-2023,,"5,000",,,,,,,,
+5,13-06-2023,ODACC3,FIAT PUNTO+KA51ME4692,Penal Interest,14-06-2023,500,,450,72,18,13-06-2023,,8758564,,
+6,13-06-2023,OX2001,,Offline Debit,,5000,,500,,,13-06-2023,,,,
