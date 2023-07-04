@@ -477,3 +477,14 @@ if(isOracle()){
                                     $max(auth_matrix_pending_approvals.status) as status
                                 "))
 
+
+various.php
+============
+    function getExcessCreditByOd($odId) {
+        return DB::table('od_transactions')
+        ->select(DB::raw(ifNull('sum(credit_balance)',0) . ' as credit_balance'))
+        ->where('od_account_id', $odId)
+        ->first();
+    }
+
+
