@@ -497,3 +497,25 @@ Sr No,Date (dd-mm-yyyy),OD Account No,Invoice Reference,Type,Due Date (dd-mm-yyy
 4,13-06-2023,ODACC2,FIAT PUNTO+KA51ME4691,Repayment,14-06-2023,,"5,000",,,,,,,,
 5,13-06-2023,ODACC3,FIAT PUNTO+KA51ME4692,Penal Interest,14-06-2023,500,,450,72,18,13-06-2023,,8758564,,
 6,13-06-2023,OX2001,,Offline Debit,,5000,,500,,,13-06-2023,,,,
+
+
+
+==== session kill ===
+SELECT s.inst_id,
+s.sid,
+s.serial#,
+--s.sql_id,
+p.spid,
+s.username,
+s.program
+FROM gv$session s
+JOIN gv$process p ON p.addr = s.paddr AND p.inst_id = s.inst_id
+WHERE s.type != 'BACKGROUND';
+
+
+alter system kill session '52, 38267';
+commit;
+
+alter system kill session '51, 57113';
+
+alter system kill session '262, 55222';
